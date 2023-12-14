@@ -39,8 +39,7 @@ const MainPage = () => {
   );
 
   useEffect(() => {
-    // Обновляем состояние noResults при изменении filteredData
-    setNoResults(filteredData.length === 0);
+     setNoResults(filteredData.length === 0);
   }, [filteredData]);
 
   const reset = () => {

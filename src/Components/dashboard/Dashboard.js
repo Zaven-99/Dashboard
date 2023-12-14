@@ -11,7 +11,7 @@ const Dashboard = ({ sites, loading, filteredData }) => {
   const sort = () => {
     setChangeArrow(!changeArrow);
 
-    const copyData = [...filteredData]; // Используйте копию filteredData
+    const copyData = [...filteredData];
     const sortData = copyData.sort((a, b) => (a.name > b.name ? 1 : -1));
     setSortedData(changeArrow ? sortData.reverse() : sortData);
   };
