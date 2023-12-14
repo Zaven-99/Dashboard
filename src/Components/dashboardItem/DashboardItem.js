@@ -1,9 +1,8 @@
 import React from "react";
 import styles from "../dashboardItem/dashboardItem.module.css";
-
 import { NavLink } from "react-router-dom";
 
-const DashboardItem = ({ tests, sites , filteredData}) => {
+const DashboardItem = ({ sites, sortedData }) => {
   const statusClasses = {
     online: styles["online-status"],
     draft: styles["draft-status"],
@@ -13,11 +12,27 @@ const DashboardItem = ({ tests, sites , filteredData}) => {
 
   return (
     <div>
-      {filteredData.map((test) => {
+      {sortedData.map((test) => {
         const site = sites.find((site) => site.id === test.siteId);
 
         return (
           <div key={test.id} className={styles["dashboard-item"]}>
+            {site.url === "https://market.company.com" ? (
+              <span className={styles.marketCompanyStyle}></span>
+            ) : (
+              ""
+            )}
+            {site.url === "https://www.delivery.company.com" ? (
+              <span className={styles.deliveryCompanyStyle}></span>
+            ) : (
+              ""
+            )}
+            {site.url === "http://games.company.com" ? (
+              <span className={styles.gamesCompanyStyle}></span>
+            ) : (
+              ""
+            )}
+
             <p className={styles["name"]}>{test.name}</p>
             <p className={styles["type"]}>
               {test.type.length > 3 ? test.type.toLowerCase() : test.type}
@@ -42,9 +57,9 @@ const DashboardItem = ({ tests, sites , filteredData}) => {
               }`}
             >
               {test.status === "DRAFT" ? (
-                <NavLink to="/Finalize">Finalize</NavLink>
+                <NavLink to={`/Finalize/${test.id}`}>Finalize</NavLink>
               ) : (
-                <NavLink to="/Result">Result</NavLink>
+                <NavLink to={`/Result/${test.id}`}>Result</NavLink>
               )}
             </div>
           </div>

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
-import Dashboard from "../../dashboard/Dashboard";
-import SearchInput from "../../searchInput/SearchInput";
-
+import Dashboard from "../../Components/dashboard/Dashboard";
+import SearchInput from "../../Components/searchInput/SearchInput";
 import styles from "../main/main.module.css";
 
 const MainPage = () => {
@@ -45,8 +44,8 @@ const MainPage = () => {
   }, [filteredData]);
 
   const reset = () => {
-    setValue('')
-  }
+    setValue("");
+  };
 
   return (
     <div>
@@ -62,7 +61,9 @@ const MainPage = () => {
           <div className={styles.notFound}>
             Your search did not match any results.
           </div>
-          <button onClick = {reset} className={styles.btn}>Reset</button>
+          <button onClick={reset} className={styles.btn}>
+            Reset
+          </button>
         </div>
       ) : (
         <Dashboard

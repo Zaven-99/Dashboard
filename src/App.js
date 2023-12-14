@@ -1,22 +1,18 @@
-import './App.css';
-import FinalizePage from './Components/pages/finalize/FinalizePage';
-import MainPage from './Components/pages/main/MainPage';
-import ResultPage from './Components/pages/result/ResultPage';
-import './Components/resetStyles/reset.css'
+import "./App.css";
+import FinalizePage from "./pages/finalize/FinalizePage";
+import MainPage from "./pages/main/MainPage";
+import ResultPage from "./pages/result/ResultPage";
+import { Routes, Route } from "react-router-dom";
+import "./Components/resetStyles/reset.css";
 
-import {Routes , Route} from 'react-router-dom'
- 
 function App() {
   return (
     <div className="App">
-        <Routes>
-        <Route index path = '/' element = {<MainPage/>}/>
-        <Route index path = 'Finalize/' element = {<FinalizePage/>}/>
-        <Route index path = 'Result/' element = {<ResultPage/>}/>
-
-        </Routes>
-
-        
+      <Routes>
+        <Route index path="/" element={<MainPage />} />
+        <Route index path="/Finalize/:id" element={<FinalizePage />} />
+        <Route index path="/Result/:id" element={<ResultPage />} />
+      </Routes>
     </div>
   );
 }

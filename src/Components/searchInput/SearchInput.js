@@ -1,10 +1,9 @@
 // SearchInput.js
 import React from "react";
-
 import styles from "./searchInput.module.css";
-
 import search from "../../img/icons/search.svg";
-const SearchInput = ({ tests, value , setValue , filteredData}) => {
+
+const SearchInput = ({ value, setValue, filteredData }) => {
   return (
     <>
       <div className={styles.title}>
@@ -20,7 +19,9 @@ const SearchInput = ({ tests, value , setValue , filteredData}) => {
           onChange={(e) => setValue(e.target.value)}
           placeholder="What test are you looking for?"
         />
-        <span className={styles["total-tests"]}>{filteredData.length} tests</span>
+        <span className={styles["total-tests"]}>
+          {filteredData.length} tests
+        </span>
       </div>
     </>
   );

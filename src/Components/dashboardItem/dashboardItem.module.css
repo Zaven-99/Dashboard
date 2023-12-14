@@ -8,8 +8,12 @@
     text-align: start;
     display: flex;
     align-items: center;
-    padding-left: 11px;
+    /* padding-left: 11px; */
 }
+.dashboard-item:hover{
+   transform: scale(1.01);
+   opacity: .7;
+ }
  .name{
     width: 389px;
     font-family: 'Roboto', sans-serif;
@@ -79,4 +83,25 @@
     justify-content: center;
     color:black;
 
+ }
+ .marketCompanyStyle{
+   height: 70px;
+    width: 5px;
+   background: #E14165;
+   margin-right: 11px;
+   border-radius: 3px 0px 0px 3px;
+ }
+ .deliveryCompanyStyle{
+   height: 70px;
+   width: 5px;
+  background: #C2C2FF;
+  margin-right: 11px;
+  border-radius: 3px 0px 0px 3px;
+ }
+ .gamesCompanyStyle{
+   height: 70px;
+   width: 5px;
+  background: #8686FF;
+  margin-right: 11px;
+  border-radius: 3px 0px 0px 3px;
  }

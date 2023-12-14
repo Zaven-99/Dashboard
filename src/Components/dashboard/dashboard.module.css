@@ -23,6 +23,7 @@
     align-items:center;
     width: 100px;
     margin-left: 25px;
+    cursor: pointer;
 }
 .status{
      width: 62px;

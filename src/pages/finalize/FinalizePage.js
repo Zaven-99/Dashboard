@@ -1,6 +1,6 @@
 import React from "react";
-
 import styles from "./finalize.module.css";
+
 
 const FinalizePage = () => {
   return (
