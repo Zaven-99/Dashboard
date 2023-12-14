@@ -1,0 +1,16 @@
+.notFound{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    margin-top: 149px;
+}
+.btn{
+    width: 95px;
+    color:#FFFFFF;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    background-color:#2EE5AC;
+    border-radius:10px;
+    font-weight: bold;
+    padding: 21px 25px 21px 25px;
+    margin-top: 50px;
+}

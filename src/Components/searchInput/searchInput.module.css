@@ -1,0 +1,39 @@
+.title{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 26px;
+    margin: 41px 52px 40px 48px;
+    text-align: start;
+}
+.search-input{
+    position: relative;
+    text-align: start;
+}
+input{
+    width: 93%;
+    height: 3em;
+    border-radius: 15px;
+    border: 1px solid #EBEBEB;
+    margin: 0px 48px 0px 48px;
+    padding: 0px 37px 0px 37px;
+    
+}
+input::placeholder{
+    color: #D1D1D1;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+.loupe{
+    position: absolute;
+    left: 4em;
+    top: 1.1em;
+    cursor: pointer;
+}
+.total-tests{
+    position: absolute;
+    right: 6em;
+    top: 1em;
+    color: #D1D1D1;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}

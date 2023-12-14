@@ -1,23 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import FinalizePage from './Components/pages/finalize/FinalizePage';
+import MainPage from './Components/pages/main/MainPage';
+import ResultPage from './Components/pages/result/ResultPage';
+import './Components/resetStyles/reset.css'
 
+import {Routes , Route} from 'react-router-dom'
+ 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Routes>
+        <Route index path = '/' element = {<MainPage/>}/>
+        <Route index path = 'Finalize/' element = {<FinalizePage/>}/>
+        <Route index path = 'Result/' element = {<ResultPage/>}/>
+
+        </Routes>
+
+        
     </div>
   );
 }

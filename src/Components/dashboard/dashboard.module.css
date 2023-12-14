@@ -1,0 +1,50 @@
+ .dahboard-column{
+    width: 100%;
+ }
+
+.column{
+    display: flex;
+    align-items: center;
+    margin: 30px 0px 0px 63px;
+}
+.column-name{
+    font-size: 11px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    color: #999999;
+}
+.name{
+    width: 389px;
+    text-align: start;
+}
+.type{
+     display: flex;
+    gap: 8px;
+    align-items:center;
+    width: 100px;
+    margin-left: 25px;
+}
+.status{
+     width: 62px;
+    text-align: start;
+    margin-left: 25px;
+}
+.site{
+    margin-left: 54px;
+}
+.sort{
+    cursor: pointer;
+    
+}
+ 
+.error{
+    background-color:#D1D1D1;
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 100px;
+    border-radius:10px;
+    height: 100px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
