@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "../dashboardItem/dashboardItem.module.css";
-import { NavLink } from "react-router-dom";
+import { NavLink  } from "react-router-dom";
 
-const DashboardItem = ({ sites, sortedData }) => {
+const DashboardItem = ({ sites, filteredData }) => {
   const statusClasses = {
     online: styles["online-status"],
     draft: styles["draft-status"],
@@ -10,13 +10,14 @@ const DashboardItem = ({ sites, sortedData }) => {
     stopped: styles["stopped-status"],
   };
 
-  return (
+   
+   return (
     <div>
-      {sortedData.map((test) => {
+      {filteredData.map((test) => {
         const site = sites.find((site) => site.id === test.siteId);
 
         return (
-          <div key={test.id} className={styles["dashboard-item"]}>
+          <div key={test.id} className={styles["dashboard-item"]} >
             {site.url === "https://market.company.com" ? (
               <span className={styles.marketCompanyStyle}></span>
             ) : (

@@ -3,7 +3,9 @@ import React from "react";
 import styles from "./searchInput.module.css";
 import search from "../../img/icons/search.svg";
 
-const SearchInput = ({ value, setValue, filteredData }) => {
+const SearchInput = ({ value, filteredData , handleInputChange}) => {
+
+  
   return (
     <>
       <div className={styles.title}>
@@ -16,7 +18,7 @@ const SearchInput = ({ value, setValue, filteredData }) => {
         <input
           type="text"
           value={value}
-          onChange={(e) => setValue(e.target.value)}
+          onChange={handleInputChange}
           placeholder="What test are you looking for?"
         />
         <span className={styles["total-tests"]}>

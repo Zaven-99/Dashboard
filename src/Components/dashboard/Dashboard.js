@@ -7,13 +7,20 @@ import styles from "../dashboard/dashboard.module.css";
 const Dashboard = ({ sites, loading, filteredData }) => {
   const [sortedData, setSortedData] = useState(filteredData);
   const [changeArrow, setChangeArrow] = useState(false);
+  const statusOrder = ["online", "paused", "stopped", "draft"];
 
   const sort = () => {
     setChangeArrow(!changeArrow);
 
-    const copyData = [...filteredData];
-    const sortData = copyData.sort((a, b) => (a.name > b.name ? 1 : -1));
-    setSortedData(changeArrow ? sortData.reverse() : sortData);
+    filteredData.sort((a, b) => (a.name > b.name ? 1 : -1));
+    filteredData.sort((a, b) => {
+      const statusA = statusOrder.indexOf(a.status.toLowerCase());
+      const statusB = statusOrder.indexOf(b.status.toLowerCase());
+
+      return statusA - statusB;
+    });
+
+    setSortedData(changeArrow ? filteredData.reverse() : filteredData);
   };
 
   return (
@@ -60,7 +67,7 @@ const Dashboard = ({ sites, loading, filteredData }) => {
           <tbody>
             <tr>
               <td>
-                <DashboardItem sortedData={sortedData} sites={sites} />
+                <DashboardItem filteredData={filteredData} sites={sites} />
               </td>
             </tr>
           </tbody>
